@@ -2,15 +2,33 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Página não encontrada</title>
+    <title>404</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; text-align: center; }
-        a { color: #06c; }
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 6vw;
+            font-weight: bold;
+            background: #d00;
+            color: #fff;
+            animation: piscar-fundo 0.35s steps(1) infinite;
+        }
+        h1 { margin: 0; font-size: inherit; animation: piscar-letra 0.35s steps(1) infinite; }
+        p { margin: 1vw 0 0; font-size: 2.5vw; }
+        @keyframes piscar-fundo { 50% { background: #fff; } }
+        @keyframes piscar-letra { 50% { color: #d00; } }
+        @media (prefers-reduced-motion: reduce) {
+            body, h1 { animation: none; }
+        }
     </style>
 </head>
 <body>
-    <h1>404</h1>
-    <p>Página não encontrada.</p>
-    <p><a href="{% url 'biblioteca:listar_livros' %}">Voltar para a lista de livros</a></p>
+    <h1>FAZ O LLLL</h1>
+    <p>Erro 404</p>
 </body>
 </html>
